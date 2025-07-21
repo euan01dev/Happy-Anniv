@@ -72,6 +72,7 @@ body {
   height: auto;
   overflow: hidden;
   box-sizing: border-box;
+  padding-bottom: 3rem;
 }
 
 .overlay-text {
@@ -105,32 +106,6 @@ body {
   font-size: 24px;
   animation: floatUp 4s linear forwards;
   opacity: 0.8;
-}
-
-.flower-strip {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  overflow: hidden;
-  height: 2.5rem;
-  background: rgba(255, 255, 255, 0.4);
-  z-index: 5;
-}
-
-.flower-track {
-  display: inline-block;
-  white-space: nowrap;
-  font-size: 1.5rem;
-  animation: scroll-flowers 20s linear infinite;
-}
-
-@keyframes scroll-flowers {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
 }
 
 @keyframes floatUp {
