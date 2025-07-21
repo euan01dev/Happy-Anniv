@@ -1,0 +1,178 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: sans-serif;
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+.hero {
+  height: 100vh;
+  background-image: url('for-you-cat-flower.gif');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.click-btn {
+  background-color: rgb(255, 0, 0);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 8px;
+  max-width: 100%;
+  width: auto;
+}
+
+.message {
+  background-image: url('elGato.jpg');
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.message.show {
+  display: flex;
+}
+
+.red-box {
+  background-image: url('shaquille-shaq-kiss.gif');
+  background-size: cover;
+  background-position: center;
+  border: 3px solid red;
+  border-radius: 10px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 90%;
+  max-width: 700px;
+  height: auto;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.overlay-text {
+  text-align: justify;
+  font-family: 'Georgia', serif;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 2rem;
+  border-radius: 8px;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  max-width: 100%;
+  color: #333;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 10;
+}
+
+#rose-container {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.rose {
+  position: absolute;
+  bottom: 0;
+  font-size: 24px;
+  animation: floatUp 4s linear forwards;
+  opacity: 0.8;
+}
+
+.flower-strip {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+  height: 2.5rem;
+  background: rgba(255, 255, 255, 0.4);
+  z-index: 5;
+}
+
+.flower-track {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 1.5rem;
+  animation: scroll-flowers 20s linear infinite;
+}
+
+@keyframes scroll-flowers {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+.reset-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  display: none;
+  z-index: 999;
+}
+
+@media (max-width: 600px) {
+  .click-btn,
+  .reset-btn {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+
+  .overlay-text {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  .red-box {
+    padding: 1.5rem;
+  }
+}
